@@ -143,7 +143,7 @@ def _decode_swap(data: Any) -> tuple[int, int] | None:
 
 def _decode_curve(data: Any) -> tuple[int, int] | None:
     try:
-        first, second, *_ = abi_decode(["uint256", "uint256", "uint256"], _to_bytes(data))
+        first, second, *_ = abi_decode(["uint256", "uint256", "uint256", "uint256"], _to_bytes(data))
         return int(first), int(second)
     except Exception:
         return None

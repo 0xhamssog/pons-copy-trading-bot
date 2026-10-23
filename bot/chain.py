@@ -323,6 +323,7 @@ CURVE_ABI: list[dict[str, Any]] = [
             {"name": "quoteIn", "type": "uint256", "indexed": False},
             {"name": "tokensOut", "type": "uint256", "indexed": False},
             {"name": "fee", "type": "uint256", "indexed": False},
+            {"name": "tax", "type": "uint256", "indexed": False},
         ],
     },
     {
@@ -335,6 +336,7 @@ CURVE_ABI: list[dict[str, Any]] = [
             {"name": "tokensIn", "type": "uint256", "indexed": False},
             {"name": "quoteOut", "type": "uint256", "indexed": False},
             {"name": "fee", "type": "uint256", "indexed": False},
+            {"name": "tax", "type": "uint256", "indexed": False},
         ],
     },
 ]
@@ -376,8 +378,8 @@ V2_LAUNCH_ABI: list[dict[str, Any]] = [
 ]
 
 SWAP_TOPIC = Web3.keccak(text="Swap(address,address,int256,int256,uint160,uint128,int24)")
-CURVE_BUY_TOPIC = Web3.keccak(text="CurveBuy(address,address,uint256,uint256,uint256)")
-CURVE_SELL_TOPIC = Web3.keccak(text="CurveSell(address,address,uint256,uint256,uint256)")
+CURVE_BUY_TOPIC = Web3.keccak(text="CurveBuy(address,address,uint256,uint256,uint256,uint256)")
+CURVE_SELL_TOPIC = Web3.keccak(text="CurveSell(address,address,uint256,uint256,uint256,uint256)")
 V1_LAUNCH_TOPIC = Web3.keccak(
     text="TokenLaunched(address,address,address,address,address,uint256,uint256,uint256,uint256,uint256)"
 )
